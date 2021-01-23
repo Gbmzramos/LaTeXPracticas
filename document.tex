@@ -1,0 +1,99 @@
+\documentclass[11pt]{article}
+% Comment the following line to NOT allow the usage of umlauts
+\usepackage[utf8]{inputenc}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage{graphicx}
+\usepackage{xcolor}
+
+%\usepackage{pslatex}
+
+\usepackage{bookman}
+%% Only if the base font of the document i
+\usepackage{fourier}
+%\usepackage[medium]{FiraSans}
+\usepackage[medium,scaled=0.9]{FiraMono}
+\usepackage[T1]{fontenc}
+
+
+\def\hola#1;{este es mi comando #1} 
+\def\division#1,#2:{\left(#1 \mathbin{/} #2\right)}
+\def\multiplica#1,#2:{\left[#1\times #2\right]} 
+
+\def\proposicion#1;#2:{#1, \mbox{ } #2} 
+
+\def\integral#1,#2,#3;#4:{\int_{#1} ^{#2} #3 \,  d#4} 
+
+% Start the document
+\begin{document}
+\fontfamily{pbk}\selectfont
+
+% Create a new 1st level heading
+\section{\textsf{Heading}}
+
+\textsf{Your text \textsc{isótopos cd-rom} here…}
+
+% Uncomment the following two lines if you want to have a bibliography
+%\bibliographystyle{alpha}
+%\bibliography{document}
+
+\hola \hola nombre; nuevo nombre; $f(x) = ay^2$
+
+\[ 
+ A = \int \division 12,\division a, b:: \, dx
+\]
+
+\[
+\multiplica 3, \multiplica 1,a+b::
+\] 
+\[
+\integral a, b, \integral c,d, f(x) ;x: ; y:
+\] 
+
+
+Comparemos codigo 
+\begin{verbatim} 
+\def\integral#1,#2,#3;#4:{\int_{#1}^{#2} #3 \, d{#4}} 
+\[
+\integral - \infty , 0, \exp{x^2};x:
+\] 
+\end{verbatim} 
+
+Produce:
+\[
+\integral - \infty , 0, \exp{ x^2};x:
+\] 
+
+Con 
+\begin{verbatim}\black!50
+\[
+\int_{- \infty}^0 \exp{x^2}\, dx
+\] 
+\end{verbatim} 
+
+Produce:
+\[
+\int_{- \infty}^0 \exp{ x^2}\, dx
+\]
+
+Con 
+{
+\color{black!90}
+\begin{verbatim} 
+\newcommand\Integral[4][x]{%
+\int_{#2}^{#3} #4 \, d#1%
+} 
+\[
+\Integral[y]{-\infty}{0}{\exp{y^2}} 
+\] 
+\end{verbatim} }
+
+Produce:
+\newcommand{\Integral}[4][x]{%
+\int_{#2}^{#3} #4 \, d#1% 
+} 
+\[
+\Integral[y]{-\infty}{0}{\exp{y^2}} 
+\] 
+
+
+\end{document}
