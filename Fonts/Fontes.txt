@@ -1,0 +1,50 @@
+% Paquetearía de Fuente favoritas para Latex
+
+% One Font: Greek Font
+% \usepackage{bookman}
+% \usepackage{eulervm}
+% \usepackage[scaled=0.95]{FiraMono}
+
+% Two Font: Artemisa Euler
+%\usepackage{gfsartemisia-euler}
+
+% Tree Font: Fira Sans
+% \usepackage[sfdefault,light]{FiraSans}
+% \usepackage{mathastext}
+% \usepackage[medium]{FiraMono}
+
+%\usepackage[adobe-utopia]{mathdesign}
+
+% Font: Sourcefonts
+% \usepackage[default]{sourceserifpro}
+% \usepackage{sourcesanspro}
+% \usepackage{sourcecodepro}
+% \usepackage{fourier}
+
+
+% Five Font: Latin Modern Font
+% \usepackage{lmodern}
+% \usepackage[scaled=.9]{FiraMono}
+
+% Six Font: Tex Gyre
+% \usepackage{tgbonum}
+% \usepackage{tgheros}
+% \usepackage{tgcursor}
+
+
+% Seven Font:DejaVu
+% \usepackage{DejaVuSerif}
+% \usepackage{DejaVuSans}
+% \usepackage{DejaVuSansMono}
+% \usepackage{sansmath}
+%     \sansmath
+
+% Eight Font: Sansfonts iwona
+% \usepackage{fourier}
+% \usepackage{iwona}
+% \usepackage[medium, scaled=0.9]{FiraMono}
+
+% % Nine Font: Bookman
+\usepackage{fourier}
+\usepackage{bookman}
+\usepackage[medium]{FiraMono}
