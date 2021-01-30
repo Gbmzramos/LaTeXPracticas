@@ -1,0 +1,106 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                %%%%
+%%%%    Preámbulo   %%%%
+%%%%                %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\NeedsTeXFormat{LaTeX2e}[2020/02/02]
+\ProvidesPackage{Preambulo}
+
+%------------------------------------------------------------------------------------------------------------%------------------------------------------------------------------------------------------------------------
+
+% Paquetearía de Idioma
+\RequirePackage[spanish,es-tabla,es-lcroman]{babel}
+\RequirePackage[ansinew]{inputenc}
+\RequirePackage[T1]{fontenc}
+%\RequirePackage{lmodern}
+
+%------------------------------------------------------------------------------------------------------------%------------------------------------------------------------------------------------------------------------
+
+% Paquetearía de Fuente
+\Requirepackage{fourier}
+\Requirepackage{bookman}
+\Requirepackage[medium]{FiraMono}
+
+%------------------------------------------------------------------------------------------------------------%------------------------------------------------------------------------------------------------------------
+
+% Paquetearía de Modo Matemático
+\RequirePackage{amsmath}
+\RequirePackage{amsfonts}
+\RequirePackage{amsthm}
+    \theoremstyle{definition}
+    \newtheorem{Pro}{Problema}[section]
+
+%------------------------------------------------------------------------------------------------------------%------------------------------------------------------------------------------------------------------------
+
+% Paquetearía Gráficos
+\RequirePackage{graphicx}
+\RequirePackage[x11names]{xcolor}
+
+\RequirePackage{booktabs}
+\RequirePackage{tabularx}
+    \newcolumntype{D}{>{$\displaystyle}c<{$}}
+
+%------------------------------------------------------------------------------------------------------------%------------------------------------------------------------------------------------------------------------
+
+% Paquetearía de Área de Trabajo
+\usepackage[top = 2.5cm, bottom = 2.5cm, right = 3cm, left = 3cm]{geometry}
+\usepackage[pdftex]{hyperref}
+    \hypersetup{colorlinks=true,linkcolor=blue!60!black}
+
+%Paquetearía de Programación
+
+\RequirePackage{xparse}
+\RequirePackage{ifthen}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                %%%%
+%%%%    Comandos    %%%%
+%%%%                %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+%------------------------------------------------------------------------------------------------------------%------------------------------------------------------------------------------------------------------------
+
+% Comandos de Área de trabajo
+
+\def\ParIndent{\setlength{\parindent}{12pt}}
+\def\NoParIndent{\noindent}
+
+\newcommand{\ArraySpace}{\\[6pt]}
+\newcommand{\TextualReference}[2][Textual]{\hyperref[#2]{#1~\ref{#2}}} % nuevo 12/01/2021
+\newcommand{\EqualReference}[2][igualdad]{\hyperref[#2]{#1~\eqref{#2}}} %nuevo 12/01/2021
+
+% Comandos Modo Matemático
+\newcommand{\LineMath}[1]{\ensuremath{\displaystyle #1}}
+
+% Operadores Matemáticos
+
+\DeclareMathOperator{\arcsen}{arcsen}
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\im}{Im}
+
+% Comandos de Símbolo
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\I}{\mathbb{I}}
+
+\newcommand{\Abs}[1]{\lvert#1\rvert}
+\newcommand{\bigAbs}[1]{\bigl\lvert#1\bigr\rvert}
+\newcommand{\BigAbs}[1]{\Bigl\lvert#1\Bigr\rvert}
+\newcommand{\biggAbs}[1]{\biggl\lvert#1\biggr\rvert}
+\newcommand{\BiggAbs}[1]{\Biggl\lvert#1\Biggr\rvert}
+
+\newcommand{\Norm}[1]{\lVert#1\rVert}
+\newcommand{\bigNorm}[1]{\bigl\lVert#1\bigr\rVert}
+\newcommand{\BigNorm}[1]{\Bigl\lVert#1\Bigr\rVert}
+\newcommand{\biggNorm}[1]{\biggl\lVert#1\biggr\rVert}
+\newcommand{\BiggNorm}[1]{\Biggl\lVert#1\Biggr\rVert}
+
